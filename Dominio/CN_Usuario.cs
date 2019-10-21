@@ -35,7 +35,8 @@ namespace Dominio
         {
             DatosUsuario.ABM_USUARIOS(usuario, clave, nombre, apellido, Convert.ToInt32(telefono), Convert.ToInt32(celular),Convert.ToInt32(idTi), Convert.ToInt32(idIf), direccion, Convert.ToInt32(rol), id_Usuario, id_accion);
         }
-        public void ModificarClave(string clave,string usuario){
+        public void ModificarClave(string clave,string usuario)
+        {
             DatosUsuario.ModificarClave(clave, usuario);
         }
         public string BuscarPregunta(string usuario) {
@@ -61,8 +62,8 @@ namespace Dominio
             return respuesta;
         }
 
-            public void Permisos()
-            {
+        public void Permisos()
+        {
             if (CC_SesionUsuarioCache.Rol == CC_Roles.Administrador)
             {
 
@@ -71,6 +72,11 @@ namespace Dominio
             {
 
             }
+        }
+
+        public void ModificarRespuesta(string respuesta, string usuario, string idPregunta)
+        {
+            DatosUsuario.CambiarRespuesta(respuesta, usuario, Convert.ToInt32(idPregunta));
         }
 
     }

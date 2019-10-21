@@ -16,6 +16,7 @@ namespace CleanMaster
         public ListaProductos()
         {
             InitializeComponent();
+            MostrarProductos();
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,11 +41,26 @@ namespace CleanMaster
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+            //    objProducto.ABM_PRODUCTOS(txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtCelular.Text, cmbIdti.SelectedValue.ToString(), txtNidentificacion.Text, txtCorreo.Text, CC_SesionUsuarioCache.Id_Usuario, 5);
+            //    MessageBox.Show("El producto se elimino correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    dgvProductos.DataSource = objProducto.MostrarProductos();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            dgvProductos.DataSource = objProducto.BusquedaProductos(textBox1.Text);
 
         }
     }

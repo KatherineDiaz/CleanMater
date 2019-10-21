@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Dominio;
+using CapaComun.Cache;
 
 namespace CleanMaster
 {
@@ -29,7 +30,9 @@ namespace CleanMaster
         {
             try
             {
-                objetoCN.CargarProductos(txtNombre.Text, txtDescripcion.Text, txtPrecioCompra.Text, txtPrecioVenta.Text, txtCantidad.Text);
+                objetoCN.ABM_PRODUCTOS(txtNombre.Text, txtDescripcion.Text, txtPrecioCompra.Text, txtPrecioVenta.Text,
+                txtCantidad.Text,txtStMin.Text,txtStMax.Text,cmbCategoria.SelectedValue.ToString(),cmbProveedor.SelectedValue.ToString(),
+                CC_SesionUsuarioCache.Id_Usuario,4);
                 MessageBox.Show("El producto se cargó correctamente");
             }
             catch (Exception ex)
@@ -40,7 +43,7 @@ namespace CleanMaster
         private void MostrarCategorias()
         {
             cmbCategoria.DataSource = objCategoria.MostrarCategorias();
-            cmbCategoria.ValueMember = "Id_categoria";
+            cmbCategoria.ValueMember = "Id_Categoria";
             cmbCategoria.DisplayMember = "Categoria";
         }
         private void MostrarProveedores()
@@ -58,6 +61,11 @@ namespace CleanMaster
         private void Label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnCancelar_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

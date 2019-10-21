@@ -66,5 +66,18 @@ namespace CleanMaster
         {
             txtRespuesta.UseSystemPasswordChar = true;
         }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            objUsuario.ModificarRespuesta(txtRespuesta.Text, txtUser.Text, cmbIdPreg.SelectedValue.ToString());
+            MessageBox.Show("Contraseña cambiada con exito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            string claveMD5 = GenerarMD5.crearMD5(txtVerificarContraseña.Text);
+            objUsuario.ModificarClave(claveMD5, txtUser.Text);
+            MessageBox.Show("Contraseña cambiada con exito.", "Éxito", MessageBoxButtons.OK);
+        }
     }
 }

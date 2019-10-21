@@ -41,7 +41,9 @@ namespace CleanMaster
         {
             try
             {
-                objetoCN.ABM_CLIENTE(txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, txtCelular.Text, cmbIdti.SelectedValue.ToString(), txtNidentificacion.Text, txtCorreo.Text, CC_SesionUsuarioCache.Id_Usuario, 4);
+                objetoCN.ABM_CLIENTE(txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text,
+                txtCelular.Text, cmbIdti.SelectedValue.ToString(), txtNidentificacion.Text, txtCorreo.Text,
+                CC_SesionUsuarioCache.Id_Usuario, 4);
                 MessageBox.Show("El cliente se cargó correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvClientes.DataSource = objClientes.MostrarClientes();
             }

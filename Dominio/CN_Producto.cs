@@ -18,10 +18,18 @@ namespace Dominio
             tabla = objProducto.ListarProductos();
             return tabla;
         }
-        
-        public void CargarProductos(string nombre, string descripcion, string precioCompra, string precioVenta, string cantidad)
+
+        public DataTable BusquedaProductos(string busqueda)
         {
-            objProducto.CargarProductos(nombre, descripcion, Convert.ToDouble(precioCompra), Convert.ToDouble(precioVenta), Convert.ToInt32(cantidad));//, Convert.ToInt32(idProveedor), Convert.ToDateTime(fAlta), Convert.ToDateTime(fBaja)
+            DataTable tabla = new DataTable();
+            tabla = objProducto.BusquedaProductos(busqueda);
+            return tabla;
+        }
+        public void ABM_PRODUCTOS(string nombre, string descripcion, string precioCompra, string precioVenta, string cantidad,
+        string stockMin, string stockMax,string Id_Categoria, string Id_Proveedor, int id_Usuario, int id_Accion)
+        {
+            objProducto.ABM_PRODUCTOS(nombre, descripcion, Convert.ToDouble(precioCompra), Convert.ToDouble(precioVenta), Convert.ToInt32(cantidad),
+            Convert.ToInt32(stockMin),Convert.ToInt32(stockMax),Convert.ToInt32(Id_Categoria),Convert.ToInt32(Id_Proveedor),id_Usuario,id_Accion);
 
         }
     }

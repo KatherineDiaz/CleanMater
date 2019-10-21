@@ -150,6 +150,21 @@ namespace AccesoDatos
             }
         }
 
+        public void CambiarRespuesta(string respuesta, string usuario, int idPregunta)
+        {
+            using (var conexion = GetConnection())
+            {
+                conexion.Open();
+                using (var Comando = new SqlCommand())
+                {
+                    Comando.Connection = conexion;
+                    Comando.CommandText = "UPDATE Usuario SET Respuesta = '" + respuesta + "', Id_Pregunta = " + idPregunta + " WHERE Usuario = '" + usuario + "'";
+                    Comando.CommandType = CommandType.Text;
+                    Comando.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void Permisos()
         {
             if (CC_SesionUsuarioCache.Rol == CC_Roles.Administrador)

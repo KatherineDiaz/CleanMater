@@ -286,6 +286,7 @@
             this.button2.TabIndex = 29;
             this.button2.Text = "Actualizar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // groupBox1
             // 
@@ -312,6 +313,7 @@
             this.button1.TabIndex = 22;
             this.button1.Text = "Actualizar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // groupBox2
             // 
