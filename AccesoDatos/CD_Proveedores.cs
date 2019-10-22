@@ -18,8 +18,8 @@ namespace AccesoDatos
                 using (var Comando = new SqlCommand())
                 {
                     Comando.Connection = conexion;
-                    Comando.CommandText = "SELECT Id_Proveedor, Nombre FROM Proveedor";
-                    Comando.CommandType = CommandType.Text;
+                    Comando.CommandText = "prc_Listar_Perfil_Proveedor";
+                    Comando.CommandType = CommandType.StoredProcedure;
                     SqlDataReader leer = Comando.ExecuteReader();
                     tabla.Load(leer);
                     conexion.Close();

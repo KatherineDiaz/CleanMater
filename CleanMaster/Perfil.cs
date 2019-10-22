@@ -40,32 +40,6 @@ namespace CleanMaster
             txtDni.Text = CC_SesionUsuarioCache.NumIdentificacion.ToString();
             txtDireccion.Text = CC_SesionUsuarioCache.Direccion;
         }
-        
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            //if (CC_SesionUsuarioCache.Clave != txtClaveActual.Text)
-            //{
-            //    MessageBox.Show("Contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //if (txtContraseña.Text != txtVerificarContraseña.Text)
-            //{
-            //    MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //string claveMD5 = GenerarMD5.crearMD5(txtVerificarContraseña.Text);
-            //objUsuario.ModificarClave(claveMD5, txtUser.Text);
-            //MessageBox.Show("Contraseña cambiada con exito.", "Exito", MessageBoxButtons.OK);
-        }
-
-        private void TxtRespuesta_Leave(object sender, EventArgs e)
-        {
-            txtRespuesta.UseSystemPasswordChar = true;
-        }
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
@@ -73,11 +47,27 @@ namespace CleanMaster
             MessageBox.Show("Contraseña cambiada con exito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void BtnActualizarClave_Click(object sender, EventArgs e)
         {
             string claveMD5 = GenerarMD5.crearMD5(txtVerificarContraseña.Text);
             objUsuario.ModificarClave(claveMD5, txtUser.Text);
             MessageBox.Show("Contraseña cambiada con exito.", "Éxito", MessageBoxButtons.OK);
+        }
+        private void TxtRespuesta_Leave_1(object sender, EventArgs e)
+        {
+            txtRespuesta.UseSystemPasswordChar = true;
+
+        }
+
+        private void TxtContraseña_Leave_1(object sender, EventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = true;
+
+        }
+        private void TxtVerificarContraseña_Leave_1(object sender, EventArgs e)
+        {
+            txtVerificarContraseña.UseSystemPasswordChar = true;
+
         }
     }
 }

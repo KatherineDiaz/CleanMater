@@ -36,7 +36,6 @@ namespace CleanMaster
         private extern static void SendMessaage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         //habilita el movimiento del sistema.
 
-
         private void PictureBox1_Click(object sender, EventArgs e)
         { //Movimiento del menu vertical
             if (MenuVertical.Width == 200)
@@ -69,7 +68,6 @@ namespace CleanMaster
             this.Location = Screen.PrimaryScreen.WorkingArea.Location; //establece que la posicion del formulario va a ser = a la posicion de la pantalla principal
             restaurar.Visible = true;
             maximizar.Visible = false;
-
         }
 
         private void Restaurar_Click(object sender, EventArgs e)
@@ -122,9 +120,9 @@ namespace CleanMaster
             MenuVertical.Width = 70;
         }
 
-        private void Panel3_Paint(object sender, PaintEventArgs e)
+        private void Principal_Activated(object sender, EventArgs e)
         {
-
+            
         }
 
         //funcion para llamar a cualquier formulario hacia el panel3 0 panel central

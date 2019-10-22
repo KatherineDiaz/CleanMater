@@ -93,5 +93,10 @@ namespace CleanMaster
         {
 
         }
+
+        private void ListaProveedores_Activated(object sender, EventArgs e)
+        {
+            MostrarProveedores();
+        }
     }
 }

@@ -292,7 +292,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(720, 550);
             this.panel3.TabIndex = 7;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel3_Paint);
             // 
             // Principal
             // 
@@ -306,6 +305,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.Principal_Activated);
             this.MenuVertical.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

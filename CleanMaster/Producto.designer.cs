@@ -278,6 +278,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(419, 35);
             this.panel1.TabIndex = 34;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // label4
             // 
@@ -324,6 +325,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Producto";
             this.Text = "y";
+            this.Deactivate += new System.EventHandler(this.Producto_Deactivate);
             this.Load += new System.EventHandler(this.Producto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);

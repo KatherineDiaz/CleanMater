@@ -297,6 +297,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaProveedores";
             this.Text = "ListaProveedores";
+            this.Activated += new System.EventHandler(this.ListaProveedores_Activated);
             this.Load += new System.EventHandler(this.ListaProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.pnlAbmProveedor.ResumeLayout(false);

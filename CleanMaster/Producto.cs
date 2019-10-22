@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Dominio;
 using CapaComun.Cache;
@@ -20,7 +21,14 @@ namespace CleanMaster
         {
             InitializeComponent();
         }
-
+        #region
+        //habilita el movimiento del sistema.
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessaage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        //habilita el movimiento del sistema.
+        #endregion 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -34,6 +42,7 @@ namespace CleanMaster
                 txtCantidad.Text,txtStMin.Text,txtStMax.Text,cmbCategoria.SelectedValue.ToString(),cmbProveedor.SelectedValue.ToString(),
                 CC_SesionUsuarioCache.Id_Usuario,4);
                 MessageBox.Show("El producto se cargó correctamente");
+                
             }
             catch (Exception ex)
             {
@@ -66,6 +75,16 @@ namespace CleanMaster
         private void BtnCancelar_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Producto_Deactivate(object sender, EventArgs e)
+        {
+
         }
     }
 }

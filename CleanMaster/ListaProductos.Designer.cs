@@ -113,7 +113,6 @@
             this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar ???";
             this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // label1
             // 
@@ -162,7 +161,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaProductos";
             this.Text = "ListaProductos";
+            this.Activated += new System.EventHandler(this.ListaProductos_Activated);
             this.Load += new System.EventHandler(this.ListaProductos_Load);
+            //this.EnabledChanged += new System.EventHandler(this.ListaProductos_EnabledChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

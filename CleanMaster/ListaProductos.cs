@@ -28,15 +28,19 @@ namespace CleanMaster
         {
             MostrarProductos();
         }
-        private void MostrarProductos()
+        public void MostrarProductos()
         {
             dgvProductos.DataSource = objProducto.MostrarProductos();
+        }
+        private void BuscarProducto()
+        {
+            dgvProductos.DataSource = objProducto.BusquedaProductos(textBox1.Text);
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             Producto abmProducto = new Producto();
-            abmProducto.Show();
+            abmProducto.ShowDialog();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -53,15 +57,15 @@ namespace CleanMaster
             }
         }
 
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
             dgvProductos.DataSource = objProducto.BusquedaProductos(textBox1.Text);
+            BuscarProducto();
+        }
 
+        private void ListaProductos_Activated(object sender, EventArgs e)
+        {
+            MostrarProductos();
         }
     }
 }

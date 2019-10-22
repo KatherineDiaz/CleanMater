@@ -40,7 +40,6 @@
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtVerificarContraseña = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,17 +49,20 @@
             this.label12 = new System.Windows.Forms.Label();
             this.cmbIdPreg = new System.Windows.Forms.ComboBox();
             this.CambiarClave = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnActualizarClave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnActualizarRespuesta = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnActualizarTel = new System.Windows.Forms.Button();
+            this.btnActualizarCel = new System.Windows.Forms.Button();
             this.CambiarClave.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -89,7 +91,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 80);
+            this.label4.Location = new System.Drawing.Point(29, 85);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
@@ -100,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 111);
+            this.label5.Location = new System.Drawing.Point(29, 120);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
@@ -111,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 140);
+            this.label6.Location = new System.Drawing.Point(29, 158);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 16);
@@ -122,7 +124,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 168);
+            this.label7.Location = new System.Drawing.Point(29, 186);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 16);
@@ -149,24 +151,24 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(185, 74);
+            this.txtTelefono.Location = new System.Drawing.Point(185, 79);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(286, 22);
+            this.txtTelefono.Size = new System.Drawing.Size(245, 22);
             this.txtTelefono.TabIndex = 11;
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(185, 105);
+            this.txtCelular.Location = new System.Drawing.Point(185, 114);
             this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(286, 22);
+            this.txtCelular.Size = new System.Drawing.Size(245, 22);
             this.txtCelular.TabIndex = 12;
             // 
             // txtDni
             // 
             this.txtDni.Enabled = false;
-            this.txtDni.Location = new System.Drawing.Point(185, 134);
+            this.txtDni.Location = new System.Drawing.Point(185, 152);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(286, 22);
             this.txtDni.TabIndex = 13;
@@ -174,33 +176,26 @@
             // txtDireccion
             // 
             this.txtDireccion.Enabled = false;
-            this.txtDireccion.Location = new System.Drawing.Point(185, 162);
+            this.txtDireccion.Location = new System.Drawing.Point(185, 180);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(286, 22);
             this.txtDireccion.TabIndex = 14;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(825, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(13, 11);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(168, 25);
+            this.txtContraseña.Location = new System.Drawing.Point(185, 25);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(286, 22);
             this.txtContraseña.TabIndex = 18;
+            this.txtContraseña.Leave += new System.EventHandler(this.TxtContraseña_Leave_1);
             // 
             // txtVerificarContraseña
             // 
-            this.txtVerificarContraseña.Location = new System.Drawing.Point(168, 56);
+            this.txtVerificarContraseña.Location = new System.Drawing.Point(185, 56);
             this.txtVerificarContraseña.Name = "txtVerificarContraseña";
-            this.txtVerificarContraseña.Size = new System.Drawing.Size(286, 22);
+            this.txtVerificarContraseña.Size = new System.Drawing.Size(245, 22);
             this.txtVerificarContraseña.TabIndex = 19;
+            this.txtVerificarContraseña.Leave += new System.EventHandler(this.TxtVerificarContraseña_Leave_1);
             // 
             // label9
             // 
@@ -235,17 +230,17 @@
             // 
             // txtRespuesta
             // 
-            this.txtRespuesta.Location = new System.Drawing.Point(185, 51);
+            this.txtRespuesta.Location = new System.Drawing.Point(185, 60);
             this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.Size = new System.Drawing.Size(286, 22);
+            this.txtRespuesta.Size = new System.Drawing.Size(245, 22);
             this.txtRespuesta.TabIndex = 25;
-            this.txtRespuesta.Leave += new System.EventHandler(this.TxtRespuesta_Leave);
+            this.txtRespuesta.Leave += new System.EventHandler(this.TxtRespuesta_Leave_1);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(37, 57);
+            this.label12.Location = new System.Drawing.Point(37, 66);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 16);
@@ -263,60 +258,64 @@
             // 
             // CambiarClave
             // 
-            this.CambiarClave.Controls.Add(this.button2);
+            this.CambiarClave.Controls.Add(this.btnActualizarClave);
             this.CambiarClave.Controls.Add(this.txtContraseña);
             this.CambiarClave.Controls.Add(this.txtVerificarContraseña);
             this.CambiarClave.Controls.Add(this.label9);
             this.CambiarClave.Controls.Add(this.label10);
             this.CambiarClave.Location = new System.Drawing.Point(40, 418);
             this.CambiarClave.Name = "CambiarClave";
-            this.CambiarClave.Size = new System.Drawing.Size(487, 133);
+            this.CambiarClave.Size = new System.Drawing.Size(487, 109);
             this.CambiarClave.TabIndex = 30;
             this.CambiarClave.TabStop = false;
             this.CambiarClave.Text = "Cambiar Clave";
             // 
-            // button2
+            // btnActualizarClave
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(336, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 38);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Actualizar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.btnActualizarClave.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarClave.BackgroundImage = global::CleanMaster.Properties.Resources.actualizar;
+            this.btnActualizarClave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizarClave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarClave.ForeColor = System.Drawing.Color.Transparent;
+            this.btnActualizarClave.Location = new System.Drawing.Point(436, 52);
+            this.btnActualizarClave.Name = "btnActualizarClave";
+            this.btnActualizarClave.Size = new System.Drawing.Size(35, 31);
+            this.btnActualizarClave.TabIndex = 23;
+            this.btnActualizarClave.UseVisualStyleBackColor = false;
+            this.btnActualizarClave.Click += new System.EventHandler(this.BtnActualizarClave_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnActualizarRespuesta);
             this.groupBox1.Controls.Add(this.cmbIdPreg);
             this.groupBox1.Controls.Add(this.txtRespuesta);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Location = new System.Drawing.Point(40, 281);
+            this.groupBox1.Location = new System.Drawing.Point(40, 306);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(487, 131);
+            this.groupBox1.Size = new System.Drawing.Size(487, 106);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cambiar Respuesta";
             // 
-            // button1
+            // btnActualizarRespuesta
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(336, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 38);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            this.btnActualizarRespuesta.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarRespuesta.BackgroundImage = global::CleanMaster.Properties.Resources.actualizar;
+            this.btnActualizarRespuesta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizarRespuesta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarRespuesta.ForeColor = System.Drawing.Color.Transparent;
+            this.btnActualizarRespuesta.Location = new System.Drawing.Point(436, 51);
+            this.btnActualizarRespuesta.Name = "btnActualizarRespuesta";
+            this.btnActualizarRespuesta.Size = new System.Drawing.Size(35, 31);
+            this.btnActualizarRespuesta.TabIndex = 22;
+            this.btnActualizarRespuesta.UseVisualStyleBackColor = false;
+            this.btnActualizarRespuesta.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnActualizarCel);
+            this.groupBox2.Controls.Add(this.btnActualizarTel);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
@@ -331,7 +330,7 @@
             this.groupBox2.Controls.Add(this.txtNya);
             this.groupBox2.Location = new System.Drawing.Point(40, 66);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(487, 200);
+            this.groupBox2.Size = new System.Drawing.Size(487, 224);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Perfil de Usuario";
@@ -356,6 +355,41 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Perfil";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(825, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(13, 11);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnActualizarTel
+            // 
+            this.btnActualizarTel.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarTel.BackgroundImage = global::CleanMaster.Properties.Resources.actualizar;
+            this.btnActualizarTel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizarTel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarTel.ForeColor = System.Drawing.Color.Transparent;
+            this.btnActualizarTel.Location = new System.Drawing.Point(436, 70);
+            this.btnActualizarTel.Name = "btnActualizarTel";
+            this.btnActualizarTel.Size = new System.Drawing.Size(35, 31);
+            this.btnActualizarTel.TabIndex = 34;
+            this.btnActualizarTel.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizarCel
+            // 
+            this.btnActualizarCel.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarCel.BackgroundImage = global::CleanMaster.Properties.Resources.actualizar;
+            this.btnActualizarCel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizarCel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarCel.ForeColor = System.Drawing.Color.Transparent;
+            this.btnActualizarCel.Location = new System.Drawing.Point(436, 107);
+            this.btnActualizarCel.Name = "btnActualizarCel";
+            this.btnActualizarCel.Size = new System.Drawing.Size(35, 31);
+            this.btnActualizarCel.TabIndex = 35;
+            this.btnActualizarCel.UseVisualStyleBackColor = false;
+            // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -373,7 +407,6 @@
             this.Name = "Perfil";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.CambiarClave.ResumeLayout(false);
             this.CambiarClave.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -382,6 +415,7 @@
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -411,11 +445,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmbIdPreg;
         private System.Windows.Forms.GroupBox CambiarClave;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnActualizarRespuesta;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnActualizarClave;
+        private System.Windows.Forms.Button btnActualizarCel;
+        private System.Windows.Forms.Button btnActualizarTel;
     }
 }
